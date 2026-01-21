@@ -14,18 +14,20 @@
     --linear-color: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
     --green-color: #00FF88;
     --white-color: #FFFFFF;
+    --primary-color: #1A0B2E;
 }
 
     /* Navbar Style */
 .header{
     max-width: 1600px;
     margin: 0 auto;
-    background-color: #1A0B2E;
+    background-color: var(--primary-color);
+    border-bottom: 2px solid #412567 ;
 }
 .navbar{
     width: 75%;
     height: 92px;
-    margin: 16px 200px;
+    margin: 0px 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +36,7 @@
     width: 219px;
 }
 .nav-img{
-    display: none;
+    visibility: hidden;
 }
 
 .menu{
@@ -62,18 +64,112 @@
      background: var(--linear-color);
 }
 
+    /* banner-style */
+.banner{
+    max-width: 1600px;
+    margin: 0 auto;
+    background-image: url(./assets/hero-bg.png);
+    
+    background-repeat: no-repeat;
+    
+}
+
+.hero-btn{
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 252px;
+    margin-right: 23px;
+    border: none;
+    border-radius: 10000px;
+    padding: 8px 16px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--green-color);
+    
+}
+.banner-container{
+    /* padding: 101px 525px; */
+    width: 34%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 100px 208px ;
+}
+.banner-img{
+    text-align: center;
+    position: relative;
+}
+.microphone{
+    position: absolute;
+    padding: 78px 116px 98px;
+}
+
+.banner-content h1{
+    color: var(--white-color);
+    font-size: 3.75rem;
+    font-weight: bolder;
+    margin-top: 40px;
+}
+.banner-content p{
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 400px;
+    margin-bottom: 24px;
+}
+.banner-content button{
+    gap: 4px;
+}
+
+.spotify{
+     border: none;
+     border-radius: 10000px;
+     padding: 12.5px 20px;
+     gap: 8px;
+     display: inline-flex;
+     align-items: center;
+     color: var(--white-color);
+     background: var(--linear-color);
+}
+.subscribe{
+    border: 1px solid var(--green-color);
+    border-radius: 10000px;
+    padding: 12.5px 20px;
+    gap: 8px;
+    display: inline-flex;
+    background: transparent;
+    color: var(--green-color);
+}
+
     /* Responaive */
 @media screen and (max-width: 576px){
+/* Header/navbar responsive */
+    .header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
     .navbar{
         max-width: 440px;
         width: 90%;
         height: 60px;
         margin: 18px 20px;
     }
+    .logo{
+        width: 137px;
+    }
     .nav-img{
         display: inline;
+        margin-right: 20px;
     }
     .menu, .btn-1{
         display: none;
+    }
+/* banner responsive */
+    .banner {
+    width: 100%;
+    background-image: url(./assets/hero-bg.png);
+    background-repeat: no-repeat;
     }
 }
